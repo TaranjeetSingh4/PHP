@@ -1,0 +1,89 @@
+<?php
+
+require_once("config.php");
+session_start();
+if(isset($_SESSION['email'])){
+    $conn=get_db_connection();
+    // $user_id=$_SESSION['id'];
+    // $role_id=$_SESSION['login_user_role'];
+    
+   
+    // $user_id=$_GET['user_id'];
+   
+    
+    // $role_id=$_GET['role_id'];
+    
+    $month=$_GET['month'];
+    $year=$_GET['year'];
+
+    if((!$month) || (!$year)){
+        $currentDate = new DateTime();
+
+        // Subtract one month from the current date
+        $currentDate->modify('-1 month');
+    
+        // Get the year and month from the modified DateTime object
+        // $year = $currentDate->format('Y');
+        // $month = $currentDate->format('m');
+
+    
+        // Get the previous month and year
+        $month = $currentDate->format('m'); // Format as numeric month (01-12)
+        $year = $currentDate->format('Y');
+        // $month='07';
+        // $year=2024;
+    }
+
+   
+
+
+
+    $format_id=$_GET['id'];
+    // $month=date("m",strtotime("-1 Month"));
+    // $year=date("Y",strtotime("-1 Month"));
+    $format_name_query="select * from formats where id=$format_id";
+    $normal_field_query="select * from (SELECT m.district_name,ufd.field_id, ff.field_name, fsf.sub_field_name, SUM(ufd.value) AS total_value, f.format_name as format_name, ufd.month, ufd.year FROM user_filled_data ufd JOIN user u ON ufd.user_id = u.id JOIN master_district m ON ufd.district_id = m.id LEFT JOIN formats as f ON ufd.format_id=f.id LEFT JOIN format_fields ff ON ufd.field_id = ff.id LEFT JOIN format_sections fsf ON ufd.sub_field_id = fsf.id WHERE ufd.format_id = 15 AND ufd.month=05 AND ufd.year=2024 GROUP BY ufd.district_id, ufd.field_id, ufd.sub_field_id, ufd.month, ufd.year) as t right join format_fields as ff on t.field_id=ff.id where ff.format_id=15";
+    $sub_field_query="select * from (SELECT uf.*,f.format_name as format_name FROM `user_filled_data` as uf join formats as f on uf.format_id=f.id where uf.user_id='$user_id' and uf.role_id='$role_id' and uf.format_id='$format_id' and uf.month=$month and uf.year=$year) as t right join format_sections as fs on t.sub_field_id=fs.id where fs.format_id=$format_id";
+    // echo "$normal_field_query";
+    // die;
+    $normal_field_result=mysqli_query($conn,$normal_field_query);
+    $normal_field_array=[];
+    while($row=mysqli_fetch_assoc($normal_field_result)){
+        $normal_field_array[]=$row;
+    }
+
+
+    $sub_field_result=mysqli_query($conn,$sub_field_query);
+    $sub_field_array=array();
+
+    while($sub_field_row=mysqli_fetch_assoc($sub_field_result)){
+
+        $sub_field_sub_array=array();
+        
+        $sub_field_sub_array['format_id']=$sub_field_row['format_id'];
+        $sub_field_sub_array['section_name']=$sub_field_row['section_name'];
+        $sub_field_sub_array['sub_field_id']=$sub_field_row['sub_field_id'];
+        $sub_field_sub_array['sub_field_name']=$sub_field_row['sub_field_name'];
+        $sub_field_sub_array['sub_field_type']=$sub_field_row['sub_field_type'];
+        $sub_field_sub_array['value']=$sub_field_row['value'];
+        
+        $section_name=$sub_field_row['section_name'];
+        if (!isset($sub_field_array[$section_name])) {
+            // If it does not exist, initialize it as an empty array
+            $sub_field_array[$section_name] = [];
+        }
+        
+        $sub_field_array[$section_name][]=$sub_field_sub_array;
+    }
+
+    $name_result=mysqli_query($conn,$format_name_query);
+    $name_row=mysqli_fetch_assoc($name_result);
+
+
+}
+else{
+    header('location:../index.php');
+}
+
+
+?>

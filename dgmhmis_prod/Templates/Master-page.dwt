@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html class=" gecko win js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>NPP Lalitpur E-MASS AMRUT Online Portal</title>
+    <!-- TemplateEndEditable -->
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/app.css" rel="stylesheet" type="text/css" />
+    <link href="../css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../css/extra.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+</head>
+
+<body>
+    <div id="app-wrapper" class="app-hide-lpanel">
+        <header id="app-header">
+             
+
+            <div class="app-right-header headmrgin">
+               <div class="col-md-6 headlogo"><img src="../images/logo.png" class="img-responsive" /></div>  
+                <ul class="right-navbar">
+                    <li class="dropdown app-rheader-submenu app-header-profile">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+                            <span>
+                                <img class="img-circle " src="../images/avatar-1.jpg"></span>
+                            <span><b>Human</b><strong> Name</strong> <i class=" fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a href="javascript:void(0)"><i class="fa fa-user"></i>My Profile</a></li>
+                            <!--<li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>My Calendar</a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-envelope"></i>My Inbox  <span class="badge badge-danger">3 </span></a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-rocket"></i>My Tasks <span class="badge badge-success">7 </span></a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-lock"></i>Lock Screen</a></li>-->
+                            <li><a href="../login.html"><i class="fa fa-power-off"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div id="app-container">
+             
+
+            <section> 
+                <!-- page title -->
+                <div class="content-title">
+                    <h3 class="main-title"><!-- TemplateBeginEditable name="Main Heading" --> E-MAAS (e-Municipality as a Service)<br>
+Atal Mission for Rejuvenation & Urban Transformation (AMRUT)<!-- TemplateEndEditable --></h3>
+                </div>
+                <div class="col-md-3">sfsfs</div>
+                <div class="col-md-9">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="title elipsis">
+                             <h4><!-- TemplateBeginEditable name="Sub Heading" -->SubHeading<!-- TemplateEndEditable --></h4> 
+                          </span>
+                        </div>
+                        <div class="panel-body"><!-- TemplateBeginEditable name="Content area" -->Content Area<!-- TemplateEndEditable --></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+       
+ <div class="clearfix"></div>
+
+<div class="foot">
+Design & Developed by: <a href="http://otpl.co.in/" target="_blank"><strong style="color:#c90000;">Omni-</strong><strong style="color:#00a9f0;">Net</strong> Technologies (p) Limited</a> through <a href="http://upite.gov.in/Updesco/index.aspx" target="_blank">UPDESCO</a> . Data on this portal is maintained &amp; managed  by Nagar Palika Parishad Lalitpur, Uttar Pradesh.
+</div>
+    </div>
+
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script>
+	$(document).ready(function() {
+	$('a').each(function(){
+	if(location.href === this.href){
+	$(this).addClass('active');
+	$('a').not(this).addClass('none');
+	return false;
+	}
+	});
+	});
+	</script>
+    <script src="../js/jquery.bootstrap.wizard.js"></script>
+    <script src="../js/prettify.js"></script>
+	<script>
+    $(document).ready(function() {
+    $('#rootwizard').bootstrapWizard({'tabClass': 'bwizard-steps'});
+    window.prettyPrint && prettyPrint()
+    });
+    </script>
+</body>
+</html>

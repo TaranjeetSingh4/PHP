@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html class=" gecko win js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>NPP Lalitpur E-MASS AMRUT Online Portal</title>
+    <!-- TemplateEndEditable -->
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/app.css" rel="stylesheet" type="text/css" />
+    <link href="../css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../css/extra.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+</head>
+
+<body>
+    <div id="app-wrapper" class="app-hide-lpanel">
+        <header id="app-header">
+            <div class="app-left-header">
+                <a href="javascript:void(0)"><span>AMRUT E-MASS</span></a>
+                <span class="app-sidebar-toggle"><a href="javascript:void(0)"></a></span>
+            </div>
+
+            <div class="app-right-header">
+                <span class="app-sidebar-toggle"><a href="javascript:void(0)"></a></span>
+                <ul class="right-navbar">
+                <li class="dropdown app-rheader-submenu app-header-profile"> <a href="../dashboard.html"> <span><b>Home</b></span> </a> </li>
+                    <li class="dropdown app-rheader-submenu app-header-profile">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"> 
+                            <span>
+                                <img class="img-circle " src="../images/avatar-1.jpg"></span>
+                            <span><b>Citizen</b><strong> Admin</strong> <i class=" fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a href="my-profile.html"><i class="fa fa-user"></i>My Profile</a></li>
+                            <li><a href="change-password.html"><i class="fa fa-unlock-alt"></i>Change Password</a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-envelope-o"></i>Message</a></li>
+                            <!--<li><a href="javascript:void(0)"><i class="fa fa-calendar"></i>My Calendar</a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-envelope"></i>My Inbox  <span class="badge badge-danger">3 </span></a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-rocket"></i>My Tasks <span class="badge badge-success">7 </span></a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-lock"></i>Lock Screen</a></li>-->
+                            <li><a href="index.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+                        </ul> 
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div id="app-container">
+            <aside id="app-left-panel">
+                <div class="profile-box"> 
+                    <div class="media">
+                        <a class="pull-left" href="javascript:void(0)">
+                            <img class="img-circle" src="../images/avatar-1.jpg">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Welcome Citizen</h4>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav panel-list">
+                    <li class="nav-level">Navigation</li>
+              <!-- <li>
+                        <a href="../dashboard.html">
+                            <i class="fa fa-tachometer"></i>
+                            <span class="menu-text">Dashboard</span>  
+                        </a>
+                         
+                    </li> -->
+                    <li>
+                        <a href="../dashboard-complaints.html">
+                            <i class="fa fa-tachometer"></i>
+                            <span class="menu-text">Dashboard</span>
+                        </a>
+                         
+                    </li>
+                    <li>
+                        <a href="../cg-registration.html">
+                            <i class="fa fa-bullhorn"></i>
+                            <span class="menu-text">Complaint Registration</span> 
+                        </a>
+                         
+                    </li>
+                    
+                    <li>
+                        <a href="../cg-status.html">
+                            <i class="fa fa-hourglass-start"></i>
+                            <span class="menu-text">Complaint Status</span> 
+                        </a>
+                         
+                    </li>
+                     <li>
+                        <a href="../cg-reminder.html">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="menu-text">Send a Reminder</span> 
+                        </a>
+                         
+                    </li>
+                    <li>
+                        <a href="../cg-feedback.html">
+                            <i class="fa fa-comments"></i>
+                            <span class="menu-text">Your Feedback</span>
+                        </a>
+                         
+                    </li>
+                    
+                  
+                     
+                  <!--<li class="app-has-menu">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-table"></i>
+                            <span class="menu-text">Tables</span>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="app-sub-menu">
+                            <li class="app-has-menu">
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Datatables </span>
+                                    <span class="selected"></span>
+                                </a>
+                                <ul class="app-sub-menu">
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">Managed Datatables</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">Editable Datatables</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span class="menu-text">Advanced Datatables</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Bootstrap Tables</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">jQuery Grid</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">jQuery Footable</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li class="app-has-menu">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span class="menu-text">Forms</span>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="app-sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Sarah Elements</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Masked Inputs</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="menu-text">Pickers</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>-->
+                     
+                     
+                </ul>
+            </aside>
+
+            <section id="main-content" style="min-height: 579px;">
+                <!-- page title -->
+                <div class="content-title">
+                    <h3 class="main-title"><!-- TemplateBeginEditable name="Main Heading" -->Welcome to Admin <!-- TemplateEndEditable --></h3>
+                    
+                </div>
+                <div id="content" class="dashboard padding-20 margin-bottom-50">
+                <div class="row">
+                 <!-- TemplateBeginEditable name="content" -->
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading"> <span class="title elipsis">
+                      <h4> SubHeading </h4>
+                    </span> </div>
+                    <div class="panel-body"> Content Area </div>
+                  </div>
+                  
+              </div> 
+               
+                 
+				 <!-- TemplateEndEditable -->  
+                </div>
+                </div>
+                <div class="clearfix"></div>
+                 <div class="foot">
+Design & Developed by: <a href="http://otpl.co.in/" target="_blank"><strong style="color:#c90000;">Omni-</strong><strong style="color:#00a9f0;">Net</strong> Technologies (p) Limited</a> through <a href="http://upite.gov.in/Updesco/index.aspx" target="_blank">UPDESCO</a> . Data on this portal is maintained &amp; managed  by Nagar Palika Parishad Lalitpur, Uttar Pradesh.
+</div> 
+            </section>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="../js/bootstrap-select.min.js"></script> 
+    <script src="../js/star-rating.js" type="text/javascript"></script>
+    <script>
+	$(document).ready(function() {
+	$('a').each(function(){
+	if(location.href === this.href){
+	$(this).addClass('active');
+	$('a').not(this).addClass('none');
+	return false;
+	}
+	});
+	});
+	$(function () {
+        $(".spotlgt").owlCarousel({
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            items: 1,
+            autoPlay: !0,
+            navigation: !0,
+			pagination: false,
+			itemsDesktop : [1199,1],
+            itemsDesktopSmall : [1027,1],
+            navigationText: ["<i class='icon-arrow-left icons'></i>", "<i class='icon-arrow-right icons'></i>"]
+        }); 
+		
+		});
+	</script>
+    <script src="../js/jquery.bootstrap.wizard.js"></script>
+    <script src="../js/prettify.js"></script>
+	<script>
+    $(document).ready(function() {
+    $('#rootwizard').bootstrapWizard({'tabClass': 'bwizard-steps'});
+    window.prettyPrint && prettyPrint()
+    });
+    </script>
+	<script src="../Scripts/SelfDeclarationOfHT.js"></script>
+</body>
+</html>
